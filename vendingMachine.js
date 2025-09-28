@@ -30,15 +30,18 @@ class VendingManchine {
     }
 }
 
-const vm = new VendingManchine()
 
-const message = vm.restock({
-    id:2,
-    name: 'Water',
-    price: 30
-})
 
-console.log(message);
 
-console.log(vm);
+const vm = new VendingManchine();
+
+// const message = vm.restock({
+//     id:2,
+//     name: 'Water',
+//     price: 30
+// })
+
+// console.log(message);
+
+// console.log(vm);
 
