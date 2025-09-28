@@ -1,6 +1,6 @@
 class VendingManchine {
     constructor() {
-        this.demos = [500, 200, 100, 50, 20, 10, 5, 2,1];
+        this.demos = [500, 200, 100, 50, 20, 10, 5, 2, 1];
 
         this.product = [
             {
@@ -15,7 +15,7 @@ class VendingManchine {
 
     restock(product) {
         const isOccupied = this.product.find(item => item.id == product.id)
-        
+
         if (isOccupied) {
             return {
                 ok: false,
@@ -25,25 +25,25 @@ class VendingManchine {
 
         this.product.push(product);
 
-        return{
+        return {
             ok: true,
             message: "Product has been added"
         }
     }
-    
-    selectProduct(id){
+
+    selectProduct(id) {
         const product = this.product.find((item) => item.id == id)
-        
-        if(!product){
-            return{
+
+        if (!product) {
+            return {
                 ok: false,
                 message: "Unknow Product"
             };
         }
 
-        this.selectProduct = product 
+        this.selectProduct = product
 
-        return{
+        return {
             ok: true,
             message: 'Pls insert the coins',
         };
