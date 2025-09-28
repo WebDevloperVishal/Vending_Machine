@@ -33,7 +33,7 @@ class VendingManchine {
 const vm = new VendingManchine()
 
 const message = vm.restock({
-    id:1,
+    id:2,
     name: 'Water',
     price: 30
 })
