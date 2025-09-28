@@ -41,8 +41,12 @@ class VendingManchine {
             };
         }
 
+        this.selectProduct = product 
 
-        
+        return{
+            ok: true,
+            message: 'Pls insert the coins',
+        };
     }
 }
 
