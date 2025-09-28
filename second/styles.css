@@ -1,0 +1,96 @@
+:root {
+  --accent: #ff5722;
+  --green: #4caf50;
+  --red: #f44336;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #fafafa;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 24px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slot {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.slot.empty {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.slot:hover:not(.empty) {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+#checkout {
+  text-align: center;
+  padding: 24px;
+}
+
+.bill-btn {
+  margin: 4px;
+  padding: 8px 14px;
+}
+
+#tray {
+  margin-top: 24px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+}
+
+#dropZone {
+  font-size: 48px;
+  transition: transform .5s;
+}
+
+.drop-anim {
+  animation: drop .6s ease-in;
+}
+
+@keyframes drop {
+  from { transform: translateY(-200px) scale(.6); opacity: 0; }
+  to   { transform: translateY(0)    scale(1);   opacity: 1; }
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#toast.show {
+  opacity: 1;
+}

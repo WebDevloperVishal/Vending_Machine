@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Pro Vending Machine</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Pro Vending Machine</h1>
+    <button id="adminBtn" class="btn-secondary">Admin</button>
+  </header>
+
+  <main>
+    <!-- 1. SLOT GRID -->
+    <section id="grid"></section>
+
+    <!-- 2. PAYMENT AREA -->
+    <section id="checkout" hidden>
+      <h2 id="itemName"></h2>
+      <p>Price: ₹<span id="itemPrice"></span></p>
+
+      <div id="billButtons"></div>
+
+      <p>Inserted: ₹<span id="inserted">0</span></p>
+      <p id="dueOrChange"></p>
+
+      <div id="tray">
+        <div id="dropZone">🎁</div>
+      </div>
+    </section>
+
+    <!-- 3. ADMIN PANEL -->
+    <section id="adminPanel" hidden>
+      <h3>Admin (PIN 1234)</h3>
+      <input id="pinInput" type="password" maxlength="4" placeholder="PIN"/>
+      <button id="unlockBtn">Unlock</button>
+
+      <div id="adminFunctions" hidden>
+        <button id="restockBtn">Restock</button>
+        <button id="collectBtn">Collect Cash</button>
+        <button id="reportBtn">Sales Report</button>
+        <button id="lockBtn">Lock</button>
+      </div>
+
+      <pre id="adminOut"></pre>
+    </section>
+
+    <!-- 4. TOAST -->
+    <div id="toast"></div>
+  </main>
+
+  <script src="js/cash-box.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/vending-core.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
