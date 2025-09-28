@@ -9,6 +9,8 @@ class VendingManchine {
                 price: 30
             },
         ];
+
+        this.selectProduct = null;
     }
 
     restock(product) {
@@ -28,9 +30,21 @@ class VendingManchine {
             message: "Product has been added"
         }
     }
+    
+    selectProduct(id){
+        const product = this.product.find((item) => item.id == id)
+        
+        if(!product){
+            return{
+                ok: false,
+                message: "Unknow Product"
+            };
+        }
+
+
+        
+    }
 }
-
-
 
 
 const vm = new VendingManchine();
