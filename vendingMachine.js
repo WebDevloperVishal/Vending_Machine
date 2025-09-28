@@ -37,3 +37,8 @@ const message = vm.restock({
     name: 'Water',
     price: 30
 })
+
+console.log(message);
+
+console.log(vm);
+
