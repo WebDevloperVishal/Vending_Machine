@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Vending Machine</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>Mini Vending Machine</h1>
+
+  <section id="products"></section>
+
+  <section id="payment" hidden>
+    <h2>Selected: <span id="selection"></span> (₹<span id="price"></span>)</h2>
+
+    <label>Insert note (₹):
+      <select id="billChoice">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+      </select>
+    </label>
+    <button id="insertBtn">Insert</button>
+
+    <p>Balance: ₹<span id="balance">0</span></p>
+    <p id="due"></p>
+    <p id="change"></p>
+  </section>
+
+  <section id="message" class="msg"></section>
+
+  <script src="vendingMachine.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
